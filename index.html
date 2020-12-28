@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Application météo">
+    <meta name="keywords" content="application, météo, pwa">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="theme-color" content="#ffffff"/>
+    <link rel="icon" sizes="512x512" href="/images/icon-512.png">
+    <link rel="manifest" href="/manifest.json">
+    <!-- reuse same icon for Safari -->
+    <link rel="apple-touch-icon" href="/images/icon-512.png">
+    <!-- multiple icons for IE -->
+    <meta name="msapplication-square310x310logo" content="/images/icon-512.png">
+    <link rel="apple-touch-icon" href="/images/icon-512.png">
+    <meta name="msapplication-square70x70logo" content="/images/icon-512.png">
+    <meta name="msapplication-square150x150logo" content="/images/icon-512.png">
+    <meta name="msapplication-wide310x150logo" content="/images/icon-512.png">
+    <title>App Meteo</title>
+</head>
+<body>
+
+  <div class="container-fluid">
+    <div class="row">
+
+    <div class="col-12 recherche box">
+    <div>
+    <button id="refresh" aria-label="refresh"><i class="fas fa-location-arrow"></i></button>
+    </div>
+    <form id="recherche" action="">
+    <div>
+    <input type="text" placeholder="Ville" id="ville"> 
+    <label for="ville" aria-label="ville"></label>
+    <button type="submit" id="go" aria-label="go"><i class="fa fa-search"></i></button>
+    </div>
+    </form>
+    </div>
+    
+    <div class="col-12 daycurrent">
+    <h1>Application Météo</h1>
+    <div class="date"></div> 
+    <h2></h2> 
+    <div class="box2">
+    <img src="" alt="" width="98" height="98">
+    <div class="temperaturecurrent"></div>
+    </div>
+    <div class="maxmin"></div>
+    <div class="humid"></div>
+    </div>
+    
+    <div class="col-12 day1 box">
+    <div class="date2"></div>
+    <img src="" alt="" width="56" height="56">
+    <div class="temperaturemax"></div>
+    <div class="temperaturemin"></div>
+    </div>
+    
+    <div class="col-12 day2 box">
+    <div class="date2"></div>
+    <img src="" alt="" width="56" height="56">
+    <div class="temperaturemax"></div>
+    <div class="temperaturemin"></div>
+    </div>
+    
+    <div class="col-12 day3 box">
+    <div class="date2"></div>
+    <img src="" alt="" width="56" height="56">
+    <div class="temperaturemax"></div>
+    <div class="temperaturemin"></div>
+    </div>
+    
+    <div class="col-12 day4 box">
+    <div class="date2"></div>
+    <img src="" alt="" width="56" height="56">
+    <div class="temperaturemax"></div>
+    <div class="temperaturemin"></div>
+    </div>
+
+    </div> <!-- row -->
+  </div> <!-- container-fluid -->
+
+  <footer>
+    <div class="install">
+    <button id="btnAdd" class="d-none">Installer l'application <i class="fas fa-arrow-circle-down"></i></button>
+    </div>
+  </footer>
+
+<script>
+    if('serviceWorker' in navigator) {
+      navigator.serviceWorker
+               .register('/sw.js')
+               .then(function() { console.log("Service Worker Registered"); });
+    }
+
+
+    // fonction qui check si appli installable
+    window.addEventListener('beforeinstallprompt', (e) => {
+        console.log("beforeinstallprompt");
+    // Stash the event so it can be triggered later.
+    deferredPrompt = e;
+    // Update UI notify the user they can add to home screen
+    showInstallPromotion();
+
+});
+
+function  showInstallPromotion() {
+  //  alert("ok on peut installer");
+
+   $('#btnAdd').removeClass('d-none');
+
+}
+
+var btnAdd = document.getElementById("btnAdd");
+
+btnAdd.addEventListener('click', (e) => {
+  // hide our user interface that shows our A2HS button
+  btnAdd.style.display = 'none';
+  // Show the prompt
+  deferredPrompt.prompt();
+  // Wait for the user to respond to the prompt
+  deferredPrompt.userChoice
+    .then((choiceResult) => {
+      if (choiceResult.outcome === 'accepted') {
+        console.log('User accepted the A2HS prompt');
+      } else {
+        console.log('User dismissed the A2HS prompt');
+      }
+      deferredPrompt = null;
+    });
+});
+   
+     </script>
+
+    <script src="sw.js"></script> 
+    <script src="js/jquery-3.5.1.min.js"></script> 
+    <script src="js/scripts.js"></script>
+    
+</body>
+</html>
