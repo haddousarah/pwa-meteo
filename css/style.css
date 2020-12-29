@@ -3,8 +3,8 @@ html {
 }
 
 body {
-  background: -webkit-gradient(linear, left top, left bottom, from(#6767d4), to(#ffb1dd));
-  background: linear-gradient(#6767d4, #ffb1dd);
+  background: -webkit-gradient(linear, left top, left bottom, from(#8f77dd), to(#e69bdf));
+  background: linear-gradient(#8f77dd, #e69bdf);
   position: relative;
   min-height: 100vh;
 }
@@ -176,7 +176,7 @@ h2 {
 #ville {
   background-color: rgba(255, 255, 255, 0);
   border: 0.1rem solid white;
-  border-radius: 0.4rem;
+  border-radius: 0.2rem;
 }
 
 .fas {

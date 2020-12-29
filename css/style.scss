@@ -1,6 +1,6 @@
 html {font-size: 14px;}
 
-body {background: linear-gradient(#6767d4,#ffb1dd);
+body {background: linear-gradient(#8f77dd, #e69bdf);
       position: relative;
       min-height: 100vh;}
 
@@ -113,7 +113,7 @@ h2 {text-align: center;
 
 #ville {background-color: rgba(255, 255, 255, 0);
         border: 0.1rem solid white;
-        border-radius: 0.4rem;}
+        border-radius: 0.2rem;}
 
 .fas  {color: white;
        font-size: 1.5rem;}
@@ -122,7 +122,7 @@ h2 {text-align: center;
             font-size: 1.5rem;}
 
 input:focus {border: none;
-             outline:none;}
+             outline: none;}
 
 input {color: white;
        padding-left: 0.4rem;}
@@ -130,7 +130,7 @@ input {color: white;
 button:hover {opacity: 0.70;}
 
 button:focus {border: none;
-              outline:none;}
+              outline: none;}
 
 ::placeholder {color: white;
                opacity: 0.70;}
