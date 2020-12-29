@@ -17,7 +17,7 @@ body {background: linear-gradient(#8f77dd, #e69bdf);
 
 h1 {text-align: center;
     color: white;
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-top: 2rem;}
 
 .date {text-align: center;
@@ -38,20 +38,20 @@ h2 {text-align: center;
     font-size: 1.8rem;
     padding-top: 3rem;}
 
-.recherche {height: 6.5rem;
-            background-color: rgba(255, 255, 255, 0.329);
-            padding-top: 2.8rem;}
+.recherche {background-color: rgba(255, 255, 255, 0.329);
+            padding-top: 2rem;
+            padding-bottom: 2rem ;}
 
-.daycurrent {height: 28rem;}
+.daycurrent {padding-bottom: 2rem;}
 
-.day1 {height: 4.5rem;
-       margin-top: 1.5rem;}
+.day1 {padding-top: 2rem;}
 
-.day2 {height: 4.5rem;}
+.day2 {padding-top: 2rem;}
 
-.day3 {height: 4.5rem;}
+.day3 {padding-top: 2rem;}
 
-.day4 {height: 4.5rem;}
+.day4 {padding-top: 2rem;
+       padding-bottom: 2rem;}
 
 .box img {height: 4rem;
           width: auto;

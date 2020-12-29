@@ -35,7 +35,7 @@ body {
 h1 {
   text-align: center;
   color: white;
-  font-size: 2.2rem;
+  font-size: 2rem;
   margin-top: 2rem;
 }
 
@@ -66,30 +66,30 @@ h2 {
 }
 
 .recherche {
-  height: 6.5rem;
   background-color: rgba(255, 255, 255, 0.329);
-  padding-top: 2.8rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .daycurrent {
-  height: 28rem;
+  padding-bottom: 2rem;
 }
 
 .day1 {
-  height: 4.5rem;
-  margin-top: 1.5rem;
+  padding-top: 2rem;
 }
 
 .day2 {
-  height: 4.5rem;
+  padding-top: 2rem;
 }
 
 .day3 {
-  height: 4.5rem;
+  padding-top: 2rem;
 }
 
 .day4 {
-  height: 4.5rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .box img {
